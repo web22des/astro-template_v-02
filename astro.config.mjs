@@ -10,8 +10,7 @@ const isGHPages = process.env.GITHUB_ACTIONS === "true"; // Автоопреде
 // https://astro.build/config
 export default defineConfig({
     site: "https://web22des.github.io",
-    //base: isDev || isPreview || !isGHPages ? "/" : "/astro-template_v-02/",
-    base: "/",
+    base: isDev || isPreview || !isGHPages ? "/" : "/astro-template_v-02/",
     trailingSlash: "always",
     output: "static", // Явно указываем статический режим
     integrations: [mdx(), sitemap()],
